@@ -1,0 +1,32 @@
+#!/bin/bash
+#
+# Copied from Phil Hagelberg
+# 
+echo "Symlinking dotfiles..."
+
+if [ -r $HOME/.bashrc ] && [ ! -h $HOME/.bashrc ] ; then
+  rm $HOME/.bashrc # blow away the stock one
+fi
+
+if [ -r $HOME/.profile ] && [ ! -h $HOME/.profile ] ; then
+  rm $HOME/.profile # blow away the stock one
+fi
+
+for f in $(ls -a ~/.dotfiles) ; do
+  if [ ! -r "$HOME/$f" ] &&
+    [ $f != "." ] && [ $f != ".." ] &&
+    [ "$f" != ".git" ] && [ $f != ".gitignore" ] ; then
+    ln -s "$HOME/.dotfiles/$f" "$HOME/$f"
+  fi
+done
+
+# Link the bin dir
+if [ -d $HOME/bin ] ; then
+    echo "bin folder already exists so I am not going to delete it..."
+else
+    ln -s ~/.dotfiles/bin ~/bin
+fi
+
+#if [ ! -r "$HOME/.ssh/config" ]; then
+#  ln -s "$HOME/.dotfiles/.sshconfig" "$HOME/.ssh/config"
+#fi

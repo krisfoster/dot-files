@@ -1,0 +1,3 @@
+#!/bin/bash
+FREEPAGES=`vmstat | tail -1 | awk '{print $4}'`
+echo "(4096*$FREEPAGES)/1048576" | bc

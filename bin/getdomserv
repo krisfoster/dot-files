@@ -1,0 +1,2 @@
+#!/bin/bash
+nslookup `cat /etc/resolv.conf | head -4 | tail -1 | awk '{print $2}'` | tail -2 | head -1 | awk '{print $4}'

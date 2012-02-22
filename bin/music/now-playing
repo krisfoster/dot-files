@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+current = `mpc`.split("\n").first
+playlist = `mpc playlist`.split("\n")
+current_index = playlist.index(current)
+rest = playlist[(current_index + 1) .. (current_index + 5)].join("\n")
+system "notify-send \"#{current}\" \"#{rest}\""
+

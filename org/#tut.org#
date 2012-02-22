@@ -1,0 +1,29 @@
+* Tasks
+** DONE Get kieren a job
+** DONE 
+   SCHEDULED: <2011-11-15 Tue>
+** DONE Start new org file
+
+** A heading
+
+** TODO
+   SCHEDULED: <2011-11-29 Tue>
+
+   Hello some text
+
+** TODO
+
+   Some text that is relevant to the todo item [[http://www.google.com][Yellowfinch]]
+
+** TODO
+
+** DONE some
+a link [[http://www.google.com][Google]] [[http://www.google.com][Google]]  and some text :)
+
+
+* web site contne
+
+* DONE PROJ My project
+  SCHEDULED: <2011-11-16 Wed>
+  Some text.... lorem ipsum
+  ** TODO Write website
