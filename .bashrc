@@ -93,7 +93,7 @@ export JAVA_HOME=/usr/lib64/jvm/java-6-openjdk/
 # Java End
 
 # Set Oracle XE env
-source /u01/app/oracle/product/11.2.0/xe/bin/oracle_env.sh
+#source /u01/app/oracle/product/11.2.0/xe/bin/oracle_env.sh
 # Oracle XE END
 
 # SQLPlus Start
@@ -105,3 +105,9 @@ export TNS_ADMIN=${SQLPLUS_HOME}
 
 # Add rubygems commands to path
 export PATH=/var/lib/gems/1.8/bin/:${PATH}
+
+# MPD stuff - could be configured abetter way - i am sure
+export MPD_PORT=6601
+mpd --kill
+mpd $HOME/.mpdconf
+

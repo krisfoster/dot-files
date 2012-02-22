@@ -46,3 +46,9 @@ alias  ng-stat='ng ng-stats'
 alias  ng-stop='ng ng-stop'
 alias  ng-ver='ng ng-version'
 
+# mpc ...
+alias prev="mpc prev"
+alias next="mpc next"
+alias pause="mpc pause"
+alias play="mpc play"
+

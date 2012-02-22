@@ -20,13 +20,6 @@ for f in $(ls -a ~/.dotfiles) ; do
   fi
 done
 
-# Link the bin dir
-if [ -d $HOME/bin ] ; then
-    echo "bin folder already exists so I am not going to delete it..."
-else
-    ln -s ~/.dotfiles/bin ~/bin
-fi
-
 #if [ ! -r "$HOME/.ssh/config" ]; then
 #  ln -s "$HOME/.dotfiles/.sshconfig" "$HOME/.ssh/config"
 #fi
